@@ -29,7 +29,7 @@ namespace CrotA_InfoTest
             CrotA_voto = 0;
             CrotA_lode = false;
         }
-        public CrotA_Disoccupato(int voto, bool lode,int matricola,string nome):base(matricola,nome)
+        public CrotA_Disoccupato(int voto, bool lode)
         {
             CrotA_Voto = voto;
             CrotA_Lode = lode;

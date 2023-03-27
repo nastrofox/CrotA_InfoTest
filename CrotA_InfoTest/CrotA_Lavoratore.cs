@@ -23,7 +23,7 @@ namespace CrotA_InfoTest
         {
             CrotA_esperienze = 0;
         }
-        public CrotA_Lavoratore(int crotA_esperienze, int crotA_Esperienze,int matricola,string nome):base(matricola,nome)
+        public CrotA_Lavoratore(int crotA_esperienze, int crotA_Esperienze)
         {
             CrotA_Esperienze = crotA_esperienze;
         }
