@@ -28,10 +28,9 @@ namespace CrotA_InfoTest
         {
 
         }
-        
         CrotA_Candidato Crot_unparametro = new CrotA_Candidato(1);
         CrotA_Candidato Crot_dueparametri = new CrotA_Candidato(1,"nome");
-        
+
         public abstract bool isIdoneo()
         {
             return false;
