@@ -26,7 +26,8 @@ namespace CrotA_InfoTest
         }
         public CrotA_Candidato()
         {
-
+            CrotA_matricola = 0;
+            CrotA_nome = " ";
         }
         public CrotA_Candidato(int crotA_matricola)
         {
@@ -38,9 +39,6 @@ namespace CrotA_InfoTest
             this.CrotA_nome = "nome";
         }
         public abstract bool isIdoneo();
-        public abstract int punteggio()
-        {
-            return 0;
-        }
+        public abstract int punteggio();
     }
 }
