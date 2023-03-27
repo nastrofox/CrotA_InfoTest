@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="CrotA_Candidato.cs" />
     <Compile Include="CrotA_Disoccupato.cs" />
+    <Compile Include="CrotA_Lavoratore.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
