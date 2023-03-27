@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CrotA_InfoTest
 {
-    internal class CrotA_Candidato
+    public abstract class CrotA_Candidato
     {
         public int CrotA_matricola;
         public string CrotA_nome;
@@ -40,5 +40,31 @@ namespace CrotA_InfoTest
         }
         public abstract bool isIdoneo();
         public abstract int punteggio();
+        public override string ToString()
+        {
+            return CrotA_matricola + " " + CrotA_nome;
+        }
+        
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            CrotA_Candidato other = (CrotA_Candidato)obj;
+            return CrotA_matricola == other.CrotA_matricola && CrotA_nome == other.CrotA_nome;
+            
+        }
+        public int CompareTo(CrotA_Candidato tmp)
+        {
+            return punteggio().CompareTo(tmp.punteggio());
+        }
+
+        public override int GetHashCode()
+        {
+            return crotA_matricola.GetHashCode() + CrotA_nome.GetHashCode();
+        }
+
     }
 }

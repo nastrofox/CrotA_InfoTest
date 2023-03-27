@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CrotA_InfoTest
 {
-    internal class CrotA_Disoccupato : CrotA_Candidato
+    public class CrotA_Disoccupato : CrotA_Candidato
     {
         private int CrotA_voto;
         private bool CrotA_lode;
@@ -29,7 +29,7 @@ namespace CrotA_InfoTest
             CrotA_voto = 0;
             CrotA_lode = false;
         }
-        public CrotA_Disoccupato(int voto, bool lode,int matricola,string nome): base(matricola,nome)
+        public CrotA_Disoccupato(int voto, bool lode,int matricola,string nome):base(matricola,nome)
         {
             CrotA_Voto = voto;
             CrotA_Lode = lode;
@@ -46,6 +46,29 @@ namespace CrotA_InfoTest
         public override bool isIdoneo()
         {
             return this.punteggio() >= 72;
+        }
+        public override string ToString()
+        {
+            return CrotA_matricola + " " + CrotA_nome+" "+CrotA_voto+" "+CrotA_lode;
+        }
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            CrotA_Disoccupato other = (CrotA_Disoccupato)obj;
+            return CrotA_voto == other.CrotA_Voto && CrotA_lode == other.CrotA_Lode;
+
+        }
+        public int CompareTo(CrotA_Disoccupato tmp)
+        {
+            return punteggio().CompareTo(tmp.punteggio());
+        }
+        public override int GetHashCode()
+        {
+            return CrotA_voto.GetHashCode() + CrotA_lode.GetHashCode();
         }
     }
 }
