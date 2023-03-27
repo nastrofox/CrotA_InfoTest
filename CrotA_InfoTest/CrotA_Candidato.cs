@@ -28,13 +28,16 @@ namespace CrotA_InfoTest
         {
 
         }
-        CrotA_Candidato Crot_unparametro = new CrotA_Candidato(1);
-        CrotA_Candidato Crot_dueparametri = new CrotA_Candidato(1,"nome");
-
-        public abstract bool isIdoneo()
+        public CrotA_Candidato(int crotA_matricola)
         {
-            return false;
+            this.CrotA_matricola = crotA_matricola;
         }
+        public CrotA_Candidato(int crotA_matricola, string crotA_nome)
+        {
+            this.CrotA_matricola = 1;
+            this.CrotA_nome = "nome";
+        }
+        public abstract bool isIdoneo();
         public abstract int punteggio()
         {
             return 0;
