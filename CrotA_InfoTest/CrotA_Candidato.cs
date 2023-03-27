@@ -34,8 +34,8 @@ namespace CrotA_InfoTest
         }
         public CrotA_Candidato(int crotA_matricola, string crotA_nome)
         {
-            this.CrotA_matricola = crotA_matricola;
-            this.CrotA_nome = crotA_nome;
+            this.CrotA_matricola = 1;
+            this.CrotA_nome = "nome";
         }
         public abstract bool isIdoneo()
         {
